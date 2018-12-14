@@ -49,16 +49,13 @@ def makeVersionPayload():#variable a changer si bbesoin
     return payload
     
 def makeFilterloadPayload(publicKeyHash, scriptHash, transactionID):
-    def makeFilterloadPayload(publicKeyHash, scriptHash, transactionID):
-        filter = BloomFilter(3, 0.01, 0, 1)
-        filter.add(publicKeyHash)
-        filter.add(scriptHash)
-        filter.add(transactionID)
-        print(len(filter.bit_array))
-        payload = filter.serialize()
-        return payload
-
-#"163.172.183.126"
+    filter = BloomFilter(3, 0.01, 0, 1)
+    filter.add(publicKeyHash)
+    filter.add(scriptHash)
+    filter.add(transactionID)
+    print(len(filter.bit_array))
+    payload = filter.serialize()
+    return payload
 
 def sendMessage(magic,command,payload,IP):
     ip = socket.gethostbyname(IP)

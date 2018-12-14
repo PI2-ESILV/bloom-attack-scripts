@@ -1,12 +1,6 @@
-# Python 3 program to build Bloom Filter
-# Install mmh3 and bitarray 3rd party module first
-# pip install mmh3
-# pip install bitarray
-
-
 import math
-import mmh3
-from bitarray import bitarray
+import mmh3 # pip install mmh3
+from bitarray import bitarray # pip install bitarray
 
 
 class BloomFilter(object):
